@@ -1,5 +1,7 @@
 import sys
-import logging
+from .logger import logging
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 def error_message_details(error, error_details:sys):
     _,_,exc_tb=error_details.exc_info()
